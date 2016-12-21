@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:drawable="@drawable/ic_mic2stop"
+  tools:ignore="MissingPrefix">
+
+  <target android:name="stand_clip">
+    <aapt:attr name="android:animation">
+      <objectAnimator
+        android:duration="@integer/fab_animation_duration"
+        android:interpolator="@android:interpolator/accelerate_decelerate"
+        android:propertyName="pathData"
+        android:startOffset="@integer/fab_animation_duration"
+        android:valueFrom="M0,24h24v24H0z"
+        android:valueTo="M0,11h24v24H0z"
+        android:valueType="pathType" />
+    </aapt:attr>
+  </target>
+
+  <target android:name="element">
+    <aapt:attr name="android:animation">
+      <objectAnimator
+        android:duration="@integer/fab_animation_duration"
+        android:interpolator="@android:interpolator/decelerate_cubic"
+        android:propertyName="pathData"
+        android:startOffset="@integer/fab_animation_duration"
+        android:valueFrom="M12,11c0,0 0,0 3,0L15,5c0,0 0,0 -3,0S9,5 9,5v6c0,0 0,0 3,0z"
+        android:valueTo="M12,14c1.66,0 2.99,-1.34 2.99,-3L15,5c0,-1.66 -1.34,-3 -3,-3S9,3.34 9,5v6c0,1.66 1.34,3 3,3z"
+        android:valueType="pathType" />
+    </aapt:attr>
+  </target>
+
+  <target android:name="element_group">
+    <aapt:attr name="android:animation">
+      <objectAnimator
+        android:duration="@integer/fab_animation_duration"
+        android:interpolator="@android:interpolator/accelerate_decelerate"
+        android:propertyName="translateY"
+        android:startOffset="@integer/fab_animation_duration"
+        android:valueFrom="3"
+        android:valueTo="0"
+        android:valueType="floatType" />
+    </aapt:attr>
+  </target>
+
+  <target android:name="square">
+    <aapt:attr name="android:animation">
+      <objectAnimator
+        android:duration="@integer/fab_animation_duration"
+        android:interpolator="@android:interpolator/accelerate_cubic"
+        android:propertyName="pathData"
+        android:startOffset="0"
+        android:valueFrom="M6,3h12v12H6z"
+        android:valueTo="M9,5h6v6H9z"
+        android:valueType="pathType" />
+    </aapt:attr>
+  </target>
+</animated-vector>

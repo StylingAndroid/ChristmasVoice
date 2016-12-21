@@ -1,0 +1,47 @@
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+
+check.dependsOn 'checkstyle', 'pmd', 'findbugs'
+
+task pmd(type: Pmd) {
+    ignoreFailures = true
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        xml.enabled = true
+        html.enabled = false
+    }
+}
+
+task checkstyle(type: Checkstyle) {
+    ignoreFailures = true
+    configFile file("${project(':').projectDir}/config/checkstyle/checkstyle.xml")
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/test/java/**'
+    classpath = files()
+}
+
+checkstyle {
+    toolVersion = '7.3'
+}
+
+
+task findbugs(type: FindBugs, dependsOn: assemble) {
+    ignoreFailures = true
+    classes = fileTree("$projectDir/build/intermediates/classes/debug/")
+    source = fileTree("$projectDir/src/main/java/")
+    classpath = files()
+    excludeFilter = file("${project(':').projectDir}/config/findbugs/excludeFilter.xml")
+    effort = 'max'
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}

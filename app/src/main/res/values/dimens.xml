@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="icon_size">128dp</dimen>
+  <dimen name="fab_offset">16dp</dimen>
+  <dimen name="text_size">14sp</dimen>
+
+  <integer name="fab_animation_duration">@android:integer/config_shortAnimTime</integer>
+</resources>

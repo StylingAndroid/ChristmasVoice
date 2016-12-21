@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">Christmas Voice</string>
+  <string name="elf_sound">Select this if you want to sound like an elf</string>
+  <string name="santa_sound">Select this if you want to sound like Santa</string>
+  <string name="attribution_author" >Icons made by <a href="http://www.flaticon.com/authors/freepik">Freepik</a>\nfrom <a href="http://www.flaticon.com">www.flaticon.com</a></string>
+  <string name="missing_permission">This app is a voice changer app which needs to record your voice and therefore requires the &quot;record audio&quot; permission.\n\nPlease accept this permission or, if you are taken to the App Info page, then please tap on &quot;Permissions&quot; enable the &quot;Microphone&quot; permission, than tap &quot;back&quot; twice to return to the app</string>
+  <string name="permissions_button">Permissions</string>
+</resources>

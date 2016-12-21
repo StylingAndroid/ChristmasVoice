@@ -1,0 +1,77 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/fragment_recorder"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:clipChildren="false"
+  tools:application="com.stylingandroid.christmasvoice.PermissionsFragment">
+
+  <ProgressBar
+    android:id="@+id/playProgress"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+    android:id="@+id/elf"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:clickable="true"
+    android:contentDescription="@string/elf_sound"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:scaleType="centerInside"
+    app:layout_constraintBottom_toTopOf="@+id/attribution_author"
+    app:layout_constraintHorizontal_bias="0.75"
+    app:layout_constraintLeft_toRightOf="@+id/santa"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/playProgress"
+    app:srcCompat="@drawable/elf" />
+
+  <ImageView
+    android:id="@+id/santa"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:clickable="true"
+    android:contentDescription="@string/santa_sound"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:scaleType="centerInside"
+    app:layout_constraintBottom_toTopOf="@+id/attribution_author"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/elf"
+    app:layout_constraintTop_toBottomOf="@+id/playProgress"
+    app:srcCompat="@drawable/santa" />
+
+  <TextView
+    android:id="@+id/attribution_author"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:text="@string/attribution_author"
+    android:textSize="@dimen/text_size"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent" />
+
+  <android.support.design.widget.FloatingActionButton
+    android:id="@+id/floatingActionButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:fabSize="normal"
+    app:srcCompat="@drawable/ic_mic"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginEnd="@dimen/fab_offset"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="@dimen/fab_offset" />
+
+</android.support.constraint.ConstraintLayout>
